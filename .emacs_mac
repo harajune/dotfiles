@@ -1,0 +1,41 @@
+(setq load-path
+      (append
+       (list
+       (expand-file-name "~/.emacs.d/")
+       )
+       load-path))
+
+
+(set-language-environment 'Japanese)
+(set-default-coding-systems 'euc-jp-unix)
+(set-buffer-file-coding-system 'euc-jp-unix)
+(set-clipboard-coding-system 'sjis-mac)
+(utf-translate-cjk-mode 1)
+(set-file-name-coding-system 'utf-8)
+(if window-system
+    (set-keyboard-coding-system 'sjis-mac)
+  (progn
+    (set-keyboard-coding-system 'utf-8)
+    (set-terminal-coding-system 'utf-8)))
+
+
+(if (eq window-system 'mac)
+   (progn
+    (require 'carbon-font)
+     (fixed-width-set-fontset "hiramaru" 12)))
+
+(setq ri-ruby-script "/Users/harajune/.emacs.d/ri-emacs.rb")
+(autoload 'ri "/Users/harajune/.emacs.d/ri-ruby.el" nil t)
+
+(require 'rcodetools)
+(require 'anything)
+(require 'anything-rcodetools)
+(setq rct-get-all-methods-command "PAGER=cat fri -l")
+(define-key anything-map "\C-r" 'anything-execute-persistent-action)
+
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+            (local-set-key "\M-c" 'rct-complete-symbol)
+            (local-set-key "\M-r" 'xmp)))
+
+(autoload 'smarty-mode "smarty-mode" "Smarty Mode" t)
