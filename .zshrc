@@ -76,6 +76,7 @@ bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 bindkey "\\ep" history-beginning-search-backward-end
 bindkey "\\en" history-beginning-search-forward-end
+bindkey "^?" backward-delete-char
 
 ## Command history configuration
 #
@@ -117,6 +118,8 @@ alias du="du -h"
 alias df="df -h"
 
 alias su="su -l"
+alias screen="TERM=screen screen -U"
+
 
 ## terminal configuration
 #
