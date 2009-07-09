@@ -17,7 +17,12 @@ set smartcase
 set hid
 
 "keymap
-noremap <C-n> <ESC>:bp<CR>
-noremap <C-p> <ESC>:bn<CR>
+nnoremap <C-n> <ESC>:bp<CR>
+nnoremap <C-p> <ESC>:bn<CR>
 nnoremap U <ESC>:redo<CR> 
 nnoremap <tab> ==
+imap <tab> <C-t>
+imap <s-tab> <C-d>
+nnoremap <C-l> <ESC>:ls<CR>
+nnoremap <C-b> <ESC>:buffer 
+
