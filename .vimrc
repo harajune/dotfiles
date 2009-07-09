@@ -1,5 +1,5 @@
 syntax on
-inoremap <tab> <C-n>
+"inoremap <tab> <C-n>
 
 set title
 set number
@@ -15,3 +15,8 @@ set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp
 set incsearch
 set smartcase
 set hid
+
+"keymap
+noremap <C-n> <ESC>:bp<CR>
+noremap <C-p> <ESC>:bn<CR>
+nnoremap U <ESC>:redo<CR> 
