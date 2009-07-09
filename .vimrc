@@ -1,3 +1,6 @@
+set nocompatible
+filetype plugin on
+
 syntax on
 "inoremap <tab> <C-n>
 
@@ -6,6 +9,7 @@ set number
 set ruler
 set laststatus=2
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 set hlsearch
@@ -15,6 +19,17 @@ set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp
 set incsearch
 set smartcase
 set hid
+
+" □とか○の文字があってもカーソル位置がずれないようにする
+if exists('&ambiwidth')
+  set ambiwidth=double
+endif
+
+"bacspace インデントと改行を削除できるようにする
+set bs=eol,start
+
+"クリップボードと共有
+set clipboard=unnamed
 
 "keymap
 nnoremap <C-n> <ESC>:bp<CR>
@@ -26,6 +41,19 @@ imap <tab> <C-t>
 imap <s-tab> <C-d>
 nnoremap <C-l> <ESC>:ls<CR>
 nnoremap <C-b> <ESC>:buffer 
-nnoremap <C-e> $ 
+nmap <C-e> $ 
 nnoremap <C-a> ^ 
+
+set shellslash
+filetype indent on
+
+"Vim latexの設定(mac)
+let g:tex_flavor='platex'
+let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
+let g:Tex_BibtexFlavor = 'jbibtex'
+let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app'
+let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
+let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+
+
 
