@@ -20,3 +20,4 @@ set hid
 noremap <C-n> <ESC>:bp<CR>
 noremap <C-p> <ESC>:bn<CR>
 nnoremap U <ESC>:redo<CR> 
+nnoremap <tab> ==
