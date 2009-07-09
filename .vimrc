@@ -19,7 +19,7 @@ set hid
 "keymap
 nnoremap <C-n> <ESC>:bp<CR>
 nnoremap <C-p> <ESC>:bn<CR>
-nnoremap <C-d> <ESC>:bd<CR>
+nnoremap <C-c> <ESC>:bd<CR>
 nnoremap U <ESC>:redo<CR> 
 nnoremap <tab> ==
 imap <tab> <C-t>
