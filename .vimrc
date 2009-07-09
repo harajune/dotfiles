@@ -26,4 +26,6 @@ imap <tab> <C-t>
 imap <s-tab> <C-d>
 nnoremap <C-l> <ESC>:ls<CR>
 nnoremap <C-b> <ESC>:buffer 
+nnoremap <C-e> $ 
+nnoremap <C-a> ^ 
 
