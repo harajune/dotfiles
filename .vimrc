@@ -55,5 +55,8 @@ let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app'
 let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
 let g:Tex_FormatDependency_pdf = 'dvi,pdf'
 
+"changelog config
+let g:changelog_timeformat = "%Y-%m-%d"
+let g:changelog_username = "harajune <harajune@gijutsuya.jp>"
 
 
