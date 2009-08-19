@@ -1,5 +1,6 @@
 ##these settings are for max os X
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export EDITOR=vi
 #export CLASSPATH=/Users/haradajun/factory/tag_statement/trunk/mysql-connector-java-5.1.5-bin.jar:./
 #export DISPLAY=:0.0
 
