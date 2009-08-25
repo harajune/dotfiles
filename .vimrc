@@ -59,4 +59,15 @@ let g:Tex_FormatDependency_pdf = 'dvi,pdf'
 let g:changelog_timeformat = "%Y-%m-%d"
 let g:changelog_username = "harajune <harajune@gijutsuya.jp>"
 
+"for binary
+""バイナリ編集(xxd)モード（vim -b での起動、もしくは *.binファイルを開くと発動します）
+augroup BinaryXXD
+    autocmd!
+    autocmd BufReadPre  *.bin let &binary =1
+    autocmd BufReadPost * if &binary | silent %!xxd -g 1
+    autocmd BufReadPost * set ft=xxd | endif
+    autocmd BufWritePre * if &binary | %!xxd -r | endif
+    autocmd BufWritePost * if &binary | silent %!xxd -g 1
+    autocmd BufWritePost * set nomod | endif
+augroup END
 
