@@ -59,6 +59,9 @@ let g:Tex_FormatDependency_pdf = 'dvi,pdf'
 let g:changelog_timeformat = "%Y-%m-%d"
 let g:changelog_username = "harajune <harajune@gijutsuya.jp>"
 
+autocmd BufNewFile,BufRead *.ru set filetype=ruby
+autocmd BufNewFile,BufRead Rakefile set filetype=ruby
+
 "for binary
 ""バイナリ編集(xxd)モード（vim -b での起動、もしくは *.binファイルを開くと発動します）
 augroup BinaryXXD
@@ -71,3 +74,5 @@ augroup BinaryXXD
     autocmd BufWritePost * set nomod | endif
 augroup END
 
+" bell off
+set visualbell t_vb=
