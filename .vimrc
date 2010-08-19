@@ -1,7 +1,9 @@
 set nocompatible
-filetype plugin on
 
 syntax on
+filetype on
+filetype indent on
+filetype plugin on
 "inoremap <tab> <C-n>
 
 " Windows/Linuxにおいて、.vimと$VIM/vimfilesの違いを吸収する
@@ -20,7 +22,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set hlsearch
-set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%l/%L,%v)%8P\
+set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=\ (%l/%L,%v)%8P\
 set encoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932,utf-8
 set incsearch
@@ -84,19 +86,20 @@ set visualbell t_vb=
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
-let g:NeoComplCache_SmartCase = 1
-let g:NeoComplCache_EnableCamelCaseCompletion = 1
-let g:NeoComplCache_EnableUnderbarCompletion = 1
-let g:NeoComplCache_MinSyntaxLength = 3
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_min_syntax_length = 3
 let g:acp_enableAtStartup = 0
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 let g:neocomplcache_dictionary_filetype_lists = {
             \ 'default' : '',
-            \ 'php' : $DOTVIM.'/dict/php.dict'
+            \ 'php' : $DOTVIM.'/dict/php.dict',
+            \ 'ruby' : $DOTVIM.'/dict/ruby.dict'
             \ }
 
-let g:NeoComplCache_SnippetsDir = $DOTVIM.'/snippets'
+let g:neocomplcache_snippets_dir = $DOTVIM.'/snippets'
 
 " <TAB> completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
