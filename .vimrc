@@ -4,6 +4,13 @@ filetype plugin on
 syntax on
 "inoremap <tab> <C-n>
 
+" Windows/Linuxにおいて、.vimと$VIM/vimfilesの違いを吸収する
+if has('win32') || has('win64')
+    let $DOTVIM = $VIM."/vimfiles"
+else
+    let $DOTVIM = $HOME."/.vim"
+endif
+
 set title
 set number
 set ruler
@@ -37,12 +44,10 @@ nnoremap <C-p> <ESC>:bn<CR>
 nnoremap <C-c> <ESC>:bd<CR>
 nnoremap U <ESC>:redo<CR> 
 nnoremap <tab> ==
-imap <tab> <C-t>
-imap <s-tab> <C-d>
 nnoremap <C-l> <ESC>:ls<CR>
 nnoremap <C-b> <ESC>:buffer 
-nmap <C-e> $ 
-nnoremap <C-a> ^ 
+"nmap <C-e> $ 
+"nnoremap <C-a> ^ 
 
 set shellslash
 filetype indent on
@@ -76,3 +81,30 @@ augroup END
 
 " bell off
 set visualbell t_vb=
+
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+let g:NeoComplCache_SmartCase = 1
+let g:NeoComplCache_EnableCamelCaseCompletion = 1
+let g:NeoComplCache_EnableUnderbarCompletion = 1
+let g:NeoComplCache_MinSyntaxLength = 3
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+let g:neocomplcache_dictionary_filetype_lists = {
+            \ 'default' : '',
+            \ 'php' : $DOTVIM.'/dict/php.dict'
+            \ }
+
+let g:NeoComplCache_SnippetsDir = $DOTVIM.'/snippets'
+
+" <TAB> completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" snippets expand key
+imap <silent> <C-e> <Plug>(neocomplcache_snippets_expand)
+smap <silent> <C-e> <Plug>(neocomplcache_snippets_expand)
+
+" snipetts
+let g:snips_author = 'Jun Harada <harajune@gijutsuya.jp>'
+
