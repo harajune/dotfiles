@@ -111,3 +111,5 @@ smap <silent> <C-e> <Plug>(neocomplcache_snippets_expand)
 " snipetts
 let g:snips_author = 'Jun Harada <harajune@gijutsuya.jp>'
 
+" folding 
+set foldmethod=marker
