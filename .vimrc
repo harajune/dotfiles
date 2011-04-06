@@ -61,6 +61,7 @@ let g:Tex_BibtexFlavor = 'jbibtex'
 let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app'
 let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
 let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+let g:Tex_DefaultTargetFormat = 'pdf'
 
 "changelog config
 let g:changelog_timeformat = "%Y-%m-%d"
@@ -96,6 +97,7 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplcache_dictionary_filetype_lists = {
             \ 'default' : '',
             \ 'php' : $DOTVIM.'/dict/php.dict',
+            \ 'smarty' : $DOTVIM.'/dict/smarty.dict',
             \ 'ruby' : $DOTVIM.'/dict/ruby.dict'
             \ }
 

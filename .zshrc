@@ -1,6 +1,7 @@
 ##these settings are for max os X
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export EDITOR=vi
+export PATH=/Users/harajune/local/git-hg/bin:/usr/local/ruby/bin:/usr/local/gauche/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/Users/harajune/local/bin:$PATH
+export MANPATH=/opt/local/man:$MANPATH
+export __CF_USER_TEXT_ENCODING=0x1F5:0x08000100:14
 #export CLASSPATH=/Users/haradajun/factory/tag_statement/trunk/mysql-connector-java-5.1.5-bin.jar:./
 #export DISPLAY=:0.0
 
@@ -26,14 +27,14 @@ case ${UID} in
   PROMPT2="%B%{${fg[red]}%}%_#%{${reset_color}%}%b "
   SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-    PROMPT="%{${fg[green]}%}${HOST%%.*} ${PROMPT}"
+    PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
   ;;
 *)
   PROMPT="%{${fg[red]}%}%/%%%{${reset_color}%} "
   PROMPT2="%{${fg[red]}%}%_%%%{${reset_color}%} "
   SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-    PROMPT="%{${fg[green]}%}${HOST%%.*} ${PROMPT}"
+    PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
   ;;
 esac
 
@@ -77,7 +78,6 @@ bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 bindkey "\\ep" history-beginning-search-backward-end
 bindkey "\\en" history-beginning-search-forward-end
-bindkey "^?" backward-delete-char
 
 ## Command history configuration
 #
@@ -119,8 +119,6 @@ alias du="du -h"
 alias df="df -h"
 
 alias su="su -l"
-alias screen="TERM=screen screen -U"
-
 
 ## terminal configuration
 #
