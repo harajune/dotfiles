@@ -15,6 +15,10 @@ export __CF_USER_TEXT_ENCODING=0x1F5:0x08000100:14
 #
 #export LANG=ja_JP.UTF-8
 
+# WORDCHARS
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+
 ## Default shell configuration
 #
 # set prompt
