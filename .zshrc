@@ -18,6 +18,8 @@ export __CF_USER_TEXT_ENCODING=0x1F5:0x08000100:14
 # WORDCHARS
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
+# disable Ctrl-D logout
+setopt IGNOREEOF
 
 ## Default shell configuration
 #
