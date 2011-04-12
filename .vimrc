@@ -46,8 +46,9 @@ nnoremap <C-p> <ESC>:bn<CR>
 nnoremap <C-c> <ESC>:bd<CR>
 nnoremap U <ESC>:redo<CR> 
 nnoremap <tab> ==
+vnoremap <tab> ==
 nnoremap <C-l> <ESC>:ls<CR>
-nnoremap <C-b> <ESC>:buffer 
+nnoremap <C-b> <Tab> 
 "nmap <C-e> $ 
 "nnoremap <C-a> ^ 
 
@@ -115,3 +116,6 @@ let g:snips_author = 'Jun Harada <harajune@gijutsuya.jp>'
 
 " folding 
 set foldmethod=marker
+
+" ctags related
+set tags=.tags;
