@@ -29,7 +29,7 @@ autoload colors
 colors
 case ${UID} in
 0)
-  PROMPT="%B%{${fg[red]}%}%n#%{${reset_color}%}%b "
+  PROMPT="%B%{${fg[red]}%}%n %3~#%{${reset_color}%}%b "
   RPROMPT="%B%{[36m%}[%/]%{${reset_color}%}%b"
   PROMPT2="%B%{${fg[red]}%}%n %{[4m%}%_#%{${reset_color}%}%b "
   RPROMPT2=""
@@ -38,7 +38,7 @@ case ${UID} in
     PROMPT="%{${fg[green]}%}${HOST%%.*} ${PROMPT}"
   ;;
 *)
-  PROMPT="%{${fg[red]}%}%n%%%{${reset_color}%} "
+  PROMPT="%{${fg[red]}%}%n %3~%%%{${reset_color}%} "
   RPROMPT="%{[36m%}[%/]%{${reset_color}%}"
   PROMPT2="%{${fg[red]}%}%n %{[4m%}%_%{${reset_color}%} "
   RPROMPT2=""
