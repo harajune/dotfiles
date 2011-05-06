@@ -119,3 +119,6 @@ set foldmethod=marker
 
 " ctags related
 set tags=.tags;
+
+" gtags related
+nnoremap <C-]> :GtagsCursor<CR>
