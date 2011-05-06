@@ -343,7 +343,7 @@ function! s:ExecLoad(option, long_option, pattern)
             if v:shell_error == 2
                 call s:Error('invalid arguments. (gtags.vim requires GLOBAL 5.7 or later)')
             elseif v:shell_error == 3
-                "call s:Error('GTAGS not found.')
+                call s:Error('GTAGS not found.')
             else
                 call s:Error('global command failed. command line: ' . cmd)
             endif
