@@ -1,5 +1,5 @@
 ##these settings are for max os X
-export PATH=/Users/harajune/local/git-hg/bin:/usr/local/gauche/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/Users/harajune/local/bin:$PATH
+export PATH=/Users/harajune/.rbenv/bin:/Users/harajune/local/git-hg/bin:/usr/local/gauche/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/Users/harajune/local/bin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
 export __CF_USER_TEXT_ENCODING=0x1F5:0x08000100:14
 #export CLASSPATH=/Users/haradajun/factory/tag_statement/trunk/mysql-connector-java-5.1.5-bin.jar:./
@@ -165,3 +165,5 @@ kterm*|xterm*)
   ;;
 esac
 
+eval "$(rbenv init -)"
+source /Users/harajune/.pythonbrew/etc/bashrc
