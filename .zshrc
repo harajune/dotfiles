@@ -13,7 +13,7 @@ export __CF_USER_TEXT_ENCODING=0x1F5:0x08000100:14
 #
 # LANG
 #
-#export LANG=ja_JP.UTF-8
+export LANG=ja_JP.UTF-8
 
 # WORDCHARS
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
@@ -167,3 +167,12 @@ esac
 
 eval "$(rbenv init -)"
 source /Users/harajune/.pythonbrew/etc/bashrc
+
+# ssh-agent
+SSHAGENT=/usr/bin/ssh-agent
+SSHAGENTARGS="-s"
+if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
+    eval `$SSHAGENT $SSHAGENTARGS`
+    trap "kill $SSH_AGENT_PID" 0
+fi
+
