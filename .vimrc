@@ -1,7 +1,27 @@
 set nocompatible
 
+
+" vundle related
+"
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" my bundles
+Bundle 'kana/vim-fakeclip'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/unite.vim'
+"Bundle 'gtags.vim'
+Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+Bundle 'tpope/vim-rails'
+
+" bundles end
+
 syntax on
-filetype on
+"filetype on
 filetype indent on
 filetype plugin on
 "inoremap <tab> <C-n>
@@ -49,6 +69,8 @@ nnoremap <tab> ==
 vnoremap <tab> ==
 nnoremap <C-l> <ESC>:ls<CR>
 nnoremap <C-b> <Tab> 
+nnoremap <C-u> 10k
+nnoremap <C-d> 10j
 "nmap <C-e> $ 
 "nnoremap <C-a> ^ 
 
@@ -122,3 +144,4 @@ set tags=.tags;
 
 " gtags related
 nnoremap <C-]> :GtagsCursor<CR>
+
