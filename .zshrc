@@ -129,6 +129,7 @@ alias du="du -h"
 alias df="df -h"
 
 alias su="su -l"
+alias screen="screen -U"
 
 ## terminal configuration
 #
