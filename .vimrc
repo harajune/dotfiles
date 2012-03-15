@@ -69,13 +69,14 @@ nnoremap <C-c> <ESC>:bd<CR>
 nnoremap U <ESC>:redo<CR> 
 nnoremap <tab> ==
 vnoremap <tab> ==
-nnoremap <C-l> <ESC>:ls<CR>
 nnoremap <C-b> <Tab> 
 nnoremap <C-u> 10k
 nnoremap <C-d> 10j
 "nmap <C-e> $ 
 "nnoremap <C-a> ^ 
-
+map <C-l> :set cursorcolumn!<Bar>set cursorline!<CR>
+highlight CursorColumn ctermbg=Blue
+highlight CursorColumn ctermfg=Green
 set shellslash
 filetype indent on
 
