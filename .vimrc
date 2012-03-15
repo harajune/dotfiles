@@ -12,11 +12,13 @@ Bundle 'gmarik/vundle'
 
 " my bundles
 Bundle 'kana/vim-fakeclip'
+Bundle 'sudo.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 "Bundle 'gtags.vim'
 Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
 
 " bundles end
 
@@ -145,3 +147,5 @@ set tags=.tags;
 " gtags related
 nnoremap <C-]> :GtagsCursor<CR>
 
+" filetype settings
+au FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
