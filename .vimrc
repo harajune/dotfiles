@@ -19,6 +19,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'kchmck/vim-coffee-script'
 
 " bundles end
 
