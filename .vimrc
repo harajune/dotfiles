@@ -20,7 +20,8 @@ Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
-
+Bundle 'tpope/vim-markdown'
+Bundle 'thinca/vim-quickrun.git'
 " bundles end
 
 syntax on
@@ -96,6 +97,8 @@ let g:changelog_username = "harajune <harajune@gijutsuya.jp>"
 
 autocmd BufNewFile,BufRead *.ru set filetype=ruby
 autocmd BufNewFile,BufRead Rakefile set filetype=ruby
+autocmd BufRead,BufNewFile *.mkd  setfiletype mkd
+autocmd BufRead,BufNewFile *.md  setfiletype mkd
 
 "for binary
 ""バイナリ編集(xxd)モード（vim -b での起動、もしくは *.binファイルを開くと発動します）
