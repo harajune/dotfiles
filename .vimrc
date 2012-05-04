@@ -22,6 +22,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'thinca/vim-quickrun.git'
+Bundle 'tyru/open-browser.vim'
 " bundles end
 
 syntax on
