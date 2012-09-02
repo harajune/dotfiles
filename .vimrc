@@ -155,3 +155,10 @@ nnoremap <C-]> :GtagsCursor<CR>
 
 " filetype settings
 au FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+" quickrun
+let g:quickrun_config = {}
+let g:quickrun_config['markdown'] = {
+      \ 'outputter': 'browser'
+      \ }
+
