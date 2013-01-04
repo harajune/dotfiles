@@ -82,6 +82,7 @@ map <C-l> :set cursorcolumn!<Bar>set cursorline!<CR>
 
 set background=dark
 colorscheme solarized
+set t_Co=16
 
 highlight CursorColumn ctermbg=Blue
 highlight CursorColumn ctermfg=Green
