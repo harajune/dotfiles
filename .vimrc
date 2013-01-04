@@ -23,6 +23,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'thinca/vim-quickrun.git'
 Bundle 'tyru/open-browser.vim'
+Bundle 'altercation/vim-colors-solarized'
 " bundles end
 
 syntax on
@@ -78,6 +79,10 @@ nnoremap <C-d> 10j
 "nmap <C-e> $ 
 "nnoremap <C-a> ^ 
 map <C-l> :set cursorcolumn!<Bar>set cursorline!<CR>
+
+set background=dark
+colorscheme solarized
+
 highlight CursorColumn ctermbg=Blue
 highlight CursorColumn ctermfg=Green
 set shellslash
