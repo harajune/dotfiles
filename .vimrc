@@ -24,6 +24,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'thinca/vim-quickrun.git'
 Bundle 'tyru/open-browser.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'fatih/vim-go'
 " bundles end
 
 syntax on
